@@ -26,22 +26,45 @@ imgBtn.addEventListener('click', () => {
    
     // Check if valid date
   
-    if (
-      
-        birthDate.getDate() !== d
-    ) {
-        notAValidDate.innerText = `Must be a valid date`;
-        errorInputs[0].classList.add('border-red-500');
-        labels[0].classList.add('text-red-500');
-        return; // stop execution
-    }
-    if(
-        birthDate.getMonth() !== m){
-             notAValidMonth.innerText = `Must be a valid month`;
-            errorInputs[1].classList.add('border-red-500');
-            labels[1].classList.add('text-red-500');
-        return; 
-        }
+    // check empty first
+if (!d) {
+    notAValidDate.innerText = "Day is required";
+    errorInputs[0].classList.add("border-red-500");
+    labels[0].classList.add("text-red-500");
+    return;
+}
+if (!m) {
+    notAValidMonth.innerText = "Month is required";
+    errorInputs[1].classList.add("border-red-500");
+    labels[1].classList.add("text-red-500");
+    return;
+}
+if (!y) {
+    notAValidYear.innerText = "Year is required";
+    errorInputs[2].classList.add("border-red-500");
+    labels[2].classList.add("text-red-500");
+    return;
+}
+
+// now safely parse
+
+// let birthDate = new Date(y, m, d);
+
+// validate real calendar date
+if (birthDate.getDate() !== d || isNaN(birthDate.getTime())) {
+    notAValidDate.innerText = "Must be a valid date";
+    errorInputs[0].classList.add("border-red-500");
+    labels[0].classList.add("text-red-500");
+    return;
+}
+
+if (birthDate.getMonth() !== m) {
+    notAValidMonth.innerText = "Must be a valid month";
+    errorInputs[1].classList.add("border-red-500");
+    labels[1].classList.add("text-red-500");
+    return;
+}
+
     if(
         birthDate.getFullYear() !== y){
              notAValidYear.innerText = `Must be a valid Year`;
