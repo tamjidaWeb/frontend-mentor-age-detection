@@ -6,8 +6,8 @@ imgBtn.addEventListener('click', () => {
     let y = parseInt(document.querySelector('input[placeholder="YYYY"]').value);
 
 
-      let today = new Date();
-        let birthDate = new Date(y, m, d);
+    let today = new Date();
+    let birthDate = new Date(y, m, d);
     let years = today.getFullYear() - birthDate.getFullYear();
     let months = today.getMonth() - birthDate.getMonth();
     let days = today.getDate() - birthDate.getDate();
@@ -24,7 +24,7 @@ imgBtn.addEventListener('click', () => {
         labels.forEach(label=> label.classList.remove('text-red-500'));
         errorInputs.forEach(errorInput => errorInput.classList.remove('border-red-500'))
    
-// Check if valid date
+    // Check if valid date
   
     if (
       
