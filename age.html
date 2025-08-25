@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen mx-auto bg-[#F0F0F0] flex items-center justify-center">
+
+
+
+    <div class="bg-white p-10 rounded-3xl [border-bottom-right-radius:30%]">
+    <div class="pb-10 space-x-6 pr-30 flex">
+        <div class="flex flex-col">
+            <p class="date-label text-[#716F6F] uppercase font-bold tracking-[3px] text-sm">Day</p>
+            <input class="error-input py-3 px-1 w-30 rounded text-black text-2xl font-bold outline-none hover:border-blue-900" type="text" placeholder="DD">
+            <span class="days-error text-red-500"></span>
+        
+        </div>
+        <div class="flex flex-col">
+            <p class="date-label text-[#716F6F] uppercase font-bold tracking-[3px] text-sm">Months</p>
+            <input class="error-input py-3 px-1 w-30 rounded text-black text-2xl font-bold outline-none hover:border-blue-900" type="text" placeholder="MM">
+            <span class="month-error text-red-500"></span>
+
+        </div> 
+        <div class="flex flex-col">
+            <p class="date-label text-[#716F6F] uppercase font-bold tracking-[3px] text-sm">Years</p>
+            <input class="error-input py-3 px-1 w-30 rounded text-black text-2xl font-bold outline-none hover:border-blue-900" type="text" placeholder="YYYY">
+            <span class="year-error text-red-500"></span>
+
+        </div>
+
+    </div>
+   <div class="relative pb-8">
+     <hr class="text-[#DBDBDB]">
+    <img id="img-btn" onclick="calculateAge()" class=" absolute -top-8 right-0 bg-[#854DFF] rounded-full p-3" src="assets/images/icon-arrow.svg" alt="">
+
+   </div>
+    <div class="font-bold text-7xl result">
+        <h1><span class="text-[#854DFF] year-result">--</span> years</h1>
+        <h1><span class="text-[#854DFF] year-result">--</span> Months</h1>
+        <h1><span class="text-[#854DFF] year-result">--</span> Days</h1>
+    </div>
+</div>
+
+    <!-- <script src="confetti.js" defer></script> -->
+    <script src="script.js" d></script>
+</body>
+</html>
